@@ -1,10 +1,10 @@
-# translate_epub_gui_to_greek (DeepSeek)
+# Epub Translator English to Greek (DeepSeek)
 
-A tiny, GUI-based EPUB translator that preserves HTML structure and outputs a fully localized Greek EPUB next to your original file.
+A simple GUI-based EPUB translator that preserves HTML structure and outputs a fully localized Greek EPUB next to your original file.
 
 - **Click-to-run GUI** (Tkinter): pick `.epub` → progress bar → saves `<name>-greek.epub`
 - **Structure-preserving**: keeps all tags/attributes; translates only visible text nodes
-- **Fast & low-cost**: parallel requests, retry/repair passes, light quality checks
+- **Fast & low-cost**: parallel requests, retry/repair passes, light quality checks, Deepseek's affortable API
 - **No code edits needed**: just set your API key and run
 
 ---
@@ -15,7 +15,7 @@ A tiny, GUI-based EPUB translator that preserves HTML structure and outputs a fu
 - Splits each XHTML into HTML-aware chunks (paragraphs, headers, etc.)
 - Sends chunks to **DeepSeek** (`deepseek-chat` by default) with a strict system prompt to **translate to Greek while preserving HTML**
 - Runs minimal QA (Greek-ratio & “long English runs”) and optional repair passes
-- Stitches everything back and writes a clean Greek EPUB with updated metadata (`lang="el"`)
+- Stitches everything back and writes a clean Greek EPUB
 
 ---
 
@@ -31,10 +31,7 @@ A tiny, GUI-based EPUB translator that preserves HTML structure and outputs a fu
 Create a key from your DeepSeek account, then keep it private.
 
 ### 3) Configure the key
-This repo ships a tiny obfuscation helper (XOR) so the key isn’t stored plainly in the file.  
-Open `translate_epub_gui_to_greek_fast_progress_deepseek.py` and update the `_get_api_key()` encoder data with **your** key.
-
-> Tip: For open-source/public repos, prefer environment variables or an OS keychain. Never commit real keys.
+Add your DeepSeek API key to API_KEY = [ADD YOUR DEEPSEEK API KEY HERE] 
 
 ### 4) Run
 ```bash
@@ -63,12 +60,10 @@ Choose your `.epub`. A progress window will show chunk counts; the app saves `<n
 
 ---
 
-## 💸 Cost example — *“Walden Two” (310 pages) ≈ $0,33*
+## 💸 Cost example — *“Walden Two” by B.F. Skinner (310 pages) ≈ $0,33*
 
 In a real-world run, translating the ~310-page novel **Walden Two** via `deepseek-chat` cost **about $0,33** in total API usage.  
 Your exact cost will vary with edition length (tokens), chunking, retries, and provider pricing at the time you run it. Always check your provider’s current price card before large jobs.
-
-**Back-of-the-envelope:** if a novel yields ~100k–150k input tokens and similar output, translation typically lands in the **tens of cents** range with current pricing.
 
 ---
 
