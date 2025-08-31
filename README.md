@@ -60,10 +60,18 @@ Choose your `.epub`. A progress window will show chunk counts; the app saves `<n
 
 ---
 
-## 💸 Cost example — *“Walden Two” by B.F. Skinner (310 pages) ≈ $0,33*
+## 💸 Cost example — *“Walden Two” by B.F. Skinner (310 pages) ≈ $0,34*
 
-In a real-world run, translating the ~310-page novel **Walden Two** via `deepseek-chat` cost **about $0,33** in total API usage.  
+In a real-world run, translating the ~310-page novel **Walden Two** via `deepseek-chat` cost **about $0,34** in total API usage.  
 Your exact cost will vary with edition length (tokens), chunking, retries, and provider pricing at the time you run it. Always check your provider’s current price card before large jobs.
+For a better, but more expensive, translation you can use "deepseek-reasoner" on MODEL   = "deepseek-chat".
+
+
+<img width="640" height="551" alt="Walden two english" src="https://github.com/user-attachments/assets/d189e8d0-3219-445d-a2ca-e62be12faf39" />
+<img width="640" height="537" alt="Walden two greek" src="https://github.com/user-attachments/assets/a67de377-52ee-49f9-b2c0-287358966853" />
+
+<img width="516" height="179" alt="Screenshot 2025-08-31 at 2 58 31 AM" src="https://github.com/user-attachments/assets/22e87d74-b304-4183-91d4-dc100180b614" />
+<img width="318" height="147" alt="Screenshot 2025-08-31 at 2 46 04 AM" src="https://github.com/user-attachments/assets/57ef86d6-4e41-4924-8a7b-d03b54dbe9a9" />
 
 ---
 
