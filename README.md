@@ -35,7 +35,7 @@ Add your DeepSeek API key to API_KEY = [ADD YOUR DEEPSEEK API KEY HERE]
 
 ### 4) Run
 ```bash
-python translate_epub_gui_to_greek_fast_progress_deepseek.py
+python en-gr_epub_translator.py
 ```
 Choose your `.epub`. A progress window will show chunk counts; the app saves `<name>-greek.epub` next to the original.
 
